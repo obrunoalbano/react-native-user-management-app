@@ -1,79 +1,87 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native User Management App
 
-# Getting Started
+Este projeto é uma aplicação móvel desenvolvida com React Native e TypeScript, que implementa funcionalidades de gerenciamento de usuários. A aplicação utiliza várias tecnologias e bibliotecas para proporcionar uma experiência completa, incluindo gerenciamento de estado com ContextAPI, armazenamento local, cookies, integração com uma API REST usando Axios, e armazenamento de dados localmente com RealmDB.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Tecnologias Usadas
 
-## Step 1: Start the Metro Server
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **React Native**: Framework para desenvolvimento de aplicações móveis nativas utilizando React.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática ao código.
+- **Axios**: Biblioteca para realizar chamadas HTTP para APIs REST.
+- **ContextAPI**: Ferramenta para gerenciamento de estado global no React.
+- **React Hooks**: Hooks como `useState`, `useEffect`, `useCallback`, `useMemo` para gerenciar o ciclo de vida e estado dos componentes.
+- **AsyncStorage**: Armazenamento persistente assíncrono para React Native.
+- **RealmDB**: Banco de dados móvel para armazenamento local.
+- **Cookies**: Gerenciamento de cookies no React Native.
+- **Local Storage e IndexDB**: Nota: IndexDB não é suportado nativamente no React Native.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Funcionalidades
 
-To start Metro, run the following command from the _root_ of your React Native project:
+- **Gerenciamento de Usuários**: Visualização e armazenamento de informações de usuários.
+- **Integração com API REST**: Recuperação de dados de usuários a partir de uma API externa.
+- **Armazenamento Local**: Uso do AsyncStorage para armazenamento persistente.
+- **Gerenciamento de Cookies**: Armazenamento e recuperação de cookies.
+- **Banco de Dados Local**: Uso do RealmDB para armazenamento local de dados.
 
-```bash
-# using npm
-npm start
+## Instalação e Configuração
 
-# OR using Yarn
-yarn start
+### Pré-requisitos
+
+- Node.js
+- Yarn ou npm
+- Ambiente de desenvolvimento React Native configurado (Xcode para iOS, Android Studio para Android)
+
+### Passos para Instalação
+
+1. Clone o repositório:
+
+```sh
+git clone https://github.com/seu-usuario/react-native-user-management-app.git
+cd react-native-user-management-app
 ```
 
-## Step 2: Start your Application
+2. Instale as dependências:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```sh
+yarn install
+# ou
+npm install
 ```
 
-### For iOS
+3. Instale as dependências nativas:
 
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+```sh
+cd ios
+pod install
+cd ..
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+### Passos para Instalação
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+Android
 
-## Step 3: Modifying your App
+```sh
+npx react-native run-android
+```
 
-Now that you have successfully run the app, let's modify it.
+IOS
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+```sh
+npx react-native run-ios
+```
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+### Uso
 
-## Congratulations! :tada:
+A aplicação permite visualizar uma lista de usuários obtida de uma API externa, armazenar essas informações localmente e gerenciar o estado dos dados utilizando ContextAPI e hooks do React.
 
-You've successfully run and modified your React Native App. :partying_face:
+### Contribuição
 
-### Now what?
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e enviar pull requests.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+### Licença
 
-# Troubleshooting
+Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
 
-# Learn More
 
-To learn more about React Native, take a look at the following resources:
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
